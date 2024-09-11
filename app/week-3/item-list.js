@@ -76,7 +76,7 @@ const ItemList = () => {
 
 
 return (
-    <ul className="space-y-4">
+    <ul>
       <Item name={item1.name} quantity={item1.quantity} category={item1.category} />
       <Item name={item2.name} quantity={item2.quantity} category={item2.category} />
       <Item name={item3.name} quantity={item3.quantity} category={item3.category} />

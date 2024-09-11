@@ -2,9 +2,9 @@ import React from 'react';
 
 const Item = ({ name, quantity, category }) => {
   return (
-    <li className="p-2 shadow-md mb-4 ml-2 bg-blue-950 w-96 h-16">
-      <h2 className="text-xl font-bold text-white-800">{name}</h2>
-      <p className="text-s text-white-600">Buy {quantity} in {category}</p>
+    <li class="p-2 m-4 bg-slate-900 max-w-sm">
+      <h2 class="text-xl font-bold">{name}</h2>
+      <div class="text-sm ">Buy {quantity} in {category}</div>
     </li>
   );
 };
