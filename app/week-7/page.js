@@ -9,7 +9,6 @@ import itemsData from './items.json';
 const Page = () => {
   const [items, setItems] = useState(itemsData); 
 
-  // Event handler to add a new item
   const handleAddItem = (newItem) => {
     setItems([...items, newItem]); 
   };
