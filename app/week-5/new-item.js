@@ -42,7 +42,7 @@ import React, { useState } from 'react';
         </div>
         <select class="ml-1 border-2 border-gray-300 p-2 rounded-lg font-sans">
           <option value="" selected="true" disabled="disabled">Category</option>
-          <option value="produce" selected="">Produce</option>
+          <option value="produce" selected="true">Produce</option>
           <option value="dairy">Dairy</option>
           <option value="bakery">Bakery</option>
           <option value="meat">Meat</option>
