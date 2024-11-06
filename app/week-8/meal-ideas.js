@@ -27,7 +27,7 @@ const MealIdeas = ({ ingredient }) => {
     if (ingredient) {
       loadMealIdeas();
     }
-  }, [ingredient, loadMealIdeas]);
+  }, [ingredient]);
 
   return (
     <div>
