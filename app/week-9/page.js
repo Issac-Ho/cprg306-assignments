@@ -1,8 +1,7 @@
 "use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { useUserAuth } from "./_utils/auth-context"; // Adjust the path as necessary
+import React, { useEffect } from 'react';
+import { useUserAuth } from "./_utils/auth-context"; 
 
 const LandingPage = () => {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useUserAuth } from "../_utils/auth-context"; 
-import { useRouter } from 'next/navigation'; 
 import NewItem from './new-item'; 
 import ItemList from './item-list';
 import MealIdeas from './meal-ideas';
@@ -11,21 +10,6 @@ import itemsData from './items.json';
 
 const Page = () => {
   const { user } = useUserAuth(); 
-  const router = useRouter(); 
-  const [isAuthChecked, setIsAuthChecked] = useState(false); 
-
-  useEffect(() => {
-    setIsAuthChecked(true);
-
-  if (isAuthChecked && !user) {
-      router.push('/week-9');
-    }
-  }, [user, isAuthChecked, router]);
-
-  if (!isAuthChecked || (isAuthChecked && !user)) {
-    return null;
-  }
-
   const [items, setItems] = useState(itemsData); 
   const [selectedItemName, setSelectedItemName] = useState('');
 
@@ -41,6 +25,14 @@ const Page = () => {
 
     setSelectedItemName(cleanedName); 
   };
+
+  if (!user) {
+    return (
+      <div >
+        <h2>Your need to be signed in to view this page.</h2>
+      </div>
+    );
+  }
 
   return (
     <main className="bg-slate-950 p-2 m-2">
